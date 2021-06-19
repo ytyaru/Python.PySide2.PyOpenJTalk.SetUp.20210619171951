@@ -7,7 +7,6 @@ Use PyOpenJTalk with PySide2.
 # DEMO
 
 ![0](https://github.com/ytyaru/Python.PySide2.PyOpenJTalk.SetUp.20210619171951/blob/master/doc/0.png?raw=true)
-![1](https://github.com/ytyaru/Python.PySide2.PyOpenJTalk.SetUp.20210619171951/blob/master/doc/1.png?raw=true)
 
 # Requirement
 

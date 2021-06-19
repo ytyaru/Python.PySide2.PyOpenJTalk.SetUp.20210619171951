@@ -10,15 +10,16 @@ class MyDialog(QDialog):
     def __init__(self, parent=None):
         super(MyDialog, self).__init__(parent)
         self.setWindowTitle("PySide2 + PyOpenJTalk でテキストボックスに入力した文字列を発話する。")
-        myLabel = QLabel("Please type something.")
-        self.myLineEdit = QLineEdit("おめでとうございます。")
-        myButton = QPushButton("話す")
-        myButton.clicked.connect(self.myButtonClicked)
-        layout = QVBoxLayout()
-        layout.addWidget(myLabel)
-        layout.addWidget(self.myLineEdit)
-        layout.addWidget(myButton)
-        self.setLayout(layout)
+        self.myLineEdit = QLineEdit("漢字も読めます。")
+        self.myButton = QPushButton("話す")
+        self.myButton.clicked.connect(self.myButtonClicked)
+        self.myLabel = QLabel("音素")
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.myLineEdit)
+        self.layout.addWidget(self.myButton)
+        self.layout.addWidget(self.myLabel)
+        self.setLayout(self.layout)
+        self.myButton.setFocus()
     def myButtonClicked(self):
         text = self.myLineEdit.text()
         x, sr = pyopenjtalk.tts(text)
@@ -32,7 +33,9 @@ class MyDialog(QDialog):
         #x = wave_file.readframes(wave_file.getnframes()) #frameの読み込み
         #x = np.frombuffer(x, dtype= "int16") #numpy.arrayに変換
 
-        QMessageBox.information(self, "音素に変換する", text + '\n' + pyopenjtalk.g2p(text))
+        phoneme = pyopenjtalk.g2p(text)
+        self.myLabel.setText(phoneme)
+#        QMessageBox.information(self, "音素に変換する", text + '\n' + phoneme)
 
 
 if __name__ == '__main__':
