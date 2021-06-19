@@ -32,8 +32,8 @@ Run() {
 	# 私の環境では以下パスだった。
 	# /usr/local/lib/python3.7/dist-packages
 	TO_DIR=/usr/local/lib/python3.7/dist-packages
-	cp -r "$HERE/env/lib/python3.7/site-packages/pyopenjtalk-0.1.0-py3.7.egg-info" "$TO_DIR"
-	cp -r "$HERE/env/lib/python3.7/site-packages/pyopenjtalk" "$TO_DIR"
+	sudo cp -r "$HERE/env/lib/python3.7/site-packages/pyopenjtalk-0.1.0-py3.7.egg-info" "$TO_DIR"
+	sudo cp -r "$HERE/env/lib/python3.7/site-packages/pyopenjtalk" "$TO_DIR"
 
 	# その他のパッケージも入れる
 	pip3 install scipy

@@ -6,9 +6,8 @@
 
 # デモ
 
-* [demo](https://ytyaru.github.io/Python.PySide2.PyOpenJTalk.SetUp.20210619171951/)
-
-![img](https://github.com/ytyaru/Python.PySide2.PyOpenJTalk.SetUp.20210619171951/blob/master/doc/0.png?raw=true)
+![0](https://github.com/ytyaru/Python.PySide2.PyOpenJTalk.SetUp.20210619171951/blob/master/doc/0.png?raw=true)
+![1](https://github.com/ytyaru/Python.PySide2.PyOpenJTalk.SetUp.20210619171951/blob/master/doc/1.png?raw=true)
 
 # 特徴
 
@@ -33,19 +32,13 @@ Linux raspberrypi 5.4.83-v7l+ #1379 SMP Mon Dec 14 13:11:54 GMT 2020 armv7l GNU/
 
 # インストール
 
-　3.7以上のPythonをインストールする。
-
-　次に以下のように[pyxel][]をインストールする。
-
-* [pyxel/README](https://github.com/kitao/pyxel/blob/master/README.ja.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95)
-
 ```sh
-sudo apt install python3 python3-pip libsdl2-dev libsdl2-image-dev
-git clone https://github.com/kitao/pyxel.git
-cd pyxel
-make -C pyxel/core clean all
-pip3 install .
+git clone https://github.com/ytyaru/Python.PySide2.PyOpenJTalk.SetUp.20210619171951
+cd Python.PySide2.PyOpenJTalk.SetUp.20210619171951/src
+./setup.sh
 ```
+
+* [setup.sh](src/setup.sh)
 
 # 使い方
 
@@ -54,10 +47,6 @@ git clone https://github.com/ytyaru/Python.PySide2.PyOpenJTalk.SetUp.20210619171
 cd Python.PySide2.PyOpenJTalk.SetUp.20210619171951/src
 ./run.py
 ```
-
-# 注意
-
-* 注意点など
 
 # 著者
 
