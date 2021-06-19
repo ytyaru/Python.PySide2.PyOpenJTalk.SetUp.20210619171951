@@ -6,13 +6,13 @@ import numpy
 import simpleaudio as sa
 from scipy.io import wavfile
 
-class MyFirstDialog(QDialog):
+class MyDialog(QDialog):
     def __init__(self, parent=None):
-        super(MyFirstDialog, self).__init__(parent)
-        self.setWindowTitle("My First Dialog")
+        super(MyDialog, self).__init__(parent)
+        self.setWindowTitle("PySide2 + PyOpenJTalk でテキストボックスに入力した文字列を発話する。")
         myLabel = QLabel("Please type something.")
         self.myLineEdit = QLineEdit("おめでとうございます。")
-        myButton = QPushButton("Push!!")
+        myButton = QPushButton("話す")
         myButton.clicked.connect(self.myButtonClicked)
         layout = QVBoxLayout()
         layout.addWidget(myLabel)
@@ -32,13 +32,13 @@ class MyFirstDialog(QDialog):
         #x = wave_file.readframes(wave_file.getnframes()) #frameの読み込み
         #x = np.frombuffer(x, dtype= "int16") #numpy.arrayに変換
 
-        QMessageBox.information(self, "Message", text + '\n' + pyopenjtalk.g2p(text))
+        QMessageBox.information(self, "音素に変換する", text + '\n' + pyopenjtalk.g2p(text))
 
 
 if __name__ == '__main__':
         import sys
         app = QApplication(sys.argv)
-        ui = MyFirstDialog()
+        ui = MyDialog()
         ui.show()
         app.exec_()
 
