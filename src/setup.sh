@@ -12,6 +12,7 @@ Run() {
 		sudo apt -y install build-essential git cmake qt-sdk libgl1-mesa-dev qt5-default libxml2 libxslt1.1 python-dev qtbase5-dev
 		sudo apt -y install qttools5-dev-tools libqt5clucene5 libqt5concurrent5 libqt5core5a libqt5dbus5 libqt5designer5 libqt5designercomponents5 libqt5feedback5 libqt5gui5 libqt5help5 libqt5multimedia5 libqt5network5 libqt5opengl5 libqt5opengl5-dev libqt5organizer5 libqt5positioning5 libqt5printsupport5 libqt5qml5 libqt5quick5 libqt5quickwidgets5 libqt5script5 libqt5scripttools5 libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5 libqt5webkit5 libqt5widgets5 libqt5xml5 libqt5xmlpatterns5 libqt5xmlpatterns5-dev 
 		sudo apt -y install qml-module-qtquick-controls2 qml-module-qtquick-dialogs qtdeclarative5-dev qml-module-qtquick-xmllistmodel qtmultimedia5-dev qml-module-qtmultimedia libzbar-dev qml-module-qtquick-templates2
+		sudo apt -y install qml-module-qtwebkit
 #		sudo apt -y install qml-module-qtquick-controls qml-module-qtquick-layouts qml-module-qtquick-window2
 	}
 	InstallQt
